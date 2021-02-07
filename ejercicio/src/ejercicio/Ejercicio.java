@@ -18,10 +18,12 @@ public class Ejercicio {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner sc=new Scanner(System.in);
-        int num;
-        int numeros[] = new int [4];
+        int num,leer;
+        int numeros[] = new int [10];
         boolean comprobar;
-        for(int i=0;i<numeros.length;i++){
+        System.out.println("Cuantos numeros vas a leer?");
+        leer=sc.nextInt();
+        for(int i=0;i<leer;i++){
             do{
             System.out.println("Dime un numero");
             num=sc.nextInt();
