@@ -18,15 +18,28 @@ public class Ejercicio {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner sc=new Scanner(System.in);
-        int numeros[] = new int [10];
+        int num;
+        int numeros[] = new int [4];
+        boolean comprobar;
         for(int i=0;i<numeros.length;i++){
+            do{
             System.out.println("Dime un numero");
-            numeros[i]=sc.nextInt();
+            num=sc.nextInt();
+            comprobar=comnumero(num,numeros);
+            }while(comprobar==false);
+            numeros[i]=num;
         }
         Arrays.sort(numeros);
         for(int i=0;i<numeros.length;i++){
             System.out.println(numeros[i]);
         }
     }
-    
+    public static boolean comnumero (int num,int numeros[]){
+        for(int i=1;i<numeros.length;i++){
+            if(numeros[i]==num){
+                return false;
+            }        
+        }
+        return true;
+    }
 }
